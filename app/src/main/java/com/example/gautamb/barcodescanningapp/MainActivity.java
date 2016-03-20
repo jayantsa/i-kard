@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     JSONParser jParser = new JSONParser();
 
     // url to create send data. This contains the ip address of my machine on which the local server is running. You will write the IP address of your machine
-    private static String url = "http://192.168.1.9:80/barcode/data.php";
+    private static String url = "http://collegeguide.online/iciciappathon/barcode/data.php";
 
     // JSON Node names
     private static final String TAG_SUCCESS = "success";
@@ -139,8 +139,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
             // Building Parameters
             List<NameValuePair> params = new ArrayList<NameValuePair>();
-            params.add(new BasicNameValuePair("name", name));
-            params.add(new BasicNameValuePair("id", id));
+            params.add(new BasicNameValuePair("product_name", name));
+            params.add(new BasicNameValuePair("barcode_id", id));
             params.add(new BasicNameValuePair("price",inputprice));
 
             // getting JSON Object
