@@ -114,11 +114,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         TextView editText2 = (TextView)findViewById(R.id.e3);
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
 
-        nameValuePairs.add(new BasicNameValuePair("id",v1));
+        nameValuePairs.add(new BasicNameValuePair("barcode_id",v1));
         try
         {
             HttpClient httpclient = new DefaultHttpClient();
-            HttpPost httppost = new HttpPost("http://192.168.1.9:80/barcode/select.php");
+            HttpPost httppost = new HttpPost("http://collegeguide.online/iciciappathon/barcode/select.php");
             httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
             HttpResponse response = httpclient.execute(httppost);
             HttpEntity entity = response.getEntity();
@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 JSONObject no = object.getJSONObject("0");
 
                 //long q=object.getLong("f1");
-                String w= no.getString("name");
+                String w= no.getString("product_name");
                 long e=no.getLong("price");
 
                 editText1.setText(w);
