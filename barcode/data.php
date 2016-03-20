@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect("localhost","gautam_bathla","gautam007","employee");
+$con=mysqli_connect("localhost","cg_admin","gautam@007","college_guide");
 if(mysqli_connect_errno())
 {
 echo "FAILED TO CONNECT TO MySQL: " .mysqli_connect_errno();
@@ -15,15 +15,15 @@ else{
 $response = array();
  
 // check for required fields
-if (isset($_POST['id']) && isset($_POST['name'])) {
+if (isset($_POST['barcode_id']) && isset($_POST['product_name'])) {
  
-    $id = $_POST['id'];
-    $name = $_POST['name'];
+    $id = $_POST['barcode_id'];
+    $name = $_POST['product_name'];
     $price= $_POST['price'];
    
  
     // mysql inserting a new row
-    $result = mysqli_query($con,"INSERT INTO employe_data(id, name,price) VALUES('$id', '$name','$price')");
+    $result = mysqli_query($con,"INSERT INTO iKart(barcode_id, product_name,price) VALUES('$id', '$name','$price')");
  
     // check if row inserted or not
     if ($result) {
