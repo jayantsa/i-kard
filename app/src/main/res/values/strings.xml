@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DataFromBarcode</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="scan">Scan</string>
+    <string name="product_id">Id:</string>
+    <string name="product_desc">Description:</string>
+    <string name="product_price">Price:</string>
+</resources>
