@@ -7,4 +7,8 @@
     <string name="product_id">Id:</string>
     <string name="product_desc">Description:</string>
     <string name="product_price">Price:</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="scan_more">Scan More</string>
+    <string name="view_cart">Cart</string>
 </resources>
