@@ -37,9 +37,10 @@ public class Payment extends ActionBarActivity implements PaymentInterface{
         Intent i=getIntent();
         Bundle b=i.getExtras();
         String cost=b.getString("paise");
+        String list=b.getString("list");
         String url=makeUrl(CLIENT_ID,TOKEN,ACCOUNT,DESACCOUNT,cost,payeeDescription);
 
-        PaymentAsyncClass task=new PaymentAsyncClass(this);
+        PaymentAsyncClass task=new PaymentAsyncClass(this,list);
         task.listener=this;
         task.execute(url);
 
