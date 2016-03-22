@@ -56,7 +56,14 @@ public class AddProducts extends Activity {
             public void onClick(View view) {
                 Intent x = new Intent(getApplicationContext(), Payment.class);
                 x.putExtra("paise", cost);
-                Log.i("cost",cost);
+                String list="";
+                for(int i=0;i<amountList.size();i++)
+                {
+                    list+=amountList.get(i);
+                }
+                //list+="1023656455,56464687979,123456789,9876543965,1236454897,4587556232156";
+                x.putExtra("list",list);
+                Log.i("cost","1000");
                 startActivity(x);
             }
         });
