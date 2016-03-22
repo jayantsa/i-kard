@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gautamb.datafrombarcode" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,7 +22,10 @@
             android:name=".AddProducts"
             android:label="Add Products" >
         </activity>
+        <activity
+            android:name=".Payment"
+            android:label="@string/title_activity_payment" >
+        </activity>
     </application>
-    <uses-permission  android:name="android.permission.INTERNET" />
 
 </manifest>

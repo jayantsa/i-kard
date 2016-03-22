@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             public void onClick(View view) {
                 Intent cart = new Intent(getApplicationContext(), AddProducts.class);
                 cart.putExtra("total_cost", String.valueOf(total_cost));
-                cart.putExtra("amount", amount);
+                cart.putExtra("amount",amount);
                 cart.putExtra("list", product_list);
                 startActivity(cart);
             }
