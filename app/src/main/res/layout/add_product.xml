@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddProductsActivity" >
+    <Button
+        android:id="@+id/scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/scan_more"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="20dp"
+        android:background="@layout/round_shape"
+        android:textColor="#FFF" />
+
+
+    <ListView
+        android:id="@+id/mobile_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+    <TextView
+        android:id="@+id/total"
+        android:textIsSelectable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mobile_list"/>
+    <TextView
+        android:id="@+id/total_value"
+        android:textIsSelectable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mobile_list"
+        android:layout_toRightOf="@id/total"/>
+
+    <Button android:id="@+id/paynow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Pay"
+        android:layout_below="@id/total_value"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="130dp"
+        android:background="@layout/round_shape"
+        android:textColor="#FFF" />
+
+
+</LinearLayout>
